@@ -12,7 +12,7 @@ public class Message {
     private int image;
 
     @ManyToOne
-    @JoinColumn(name = "USER_ID")
+    @JoinColumn(name = "USER_name")
     private User user;
 
 

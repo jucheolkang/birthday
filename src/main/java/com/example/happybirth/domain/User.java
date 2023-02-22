@@ -10,10 +10,11 @@ import java.util.List;
 
 public class User {
     @Id @GeneratedValue
-    @Column(name = "USER_ID")
+    @Column(name = "USER_name")
+    private String userName;
     private String id;
     private String pw;
-    private String userName;
+
     private LocalDateTime birthDay;
 
     @OneToMany(mappedBy = "user")
