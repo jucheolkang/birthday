@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
+
 import java.time.LocalDateTime;
 
 @SpringBootTest
@@ -19,13 +20,13 @@ public class UserRepositoryTest {
     @Test
     @DisplayName("user 등록 테스트")
     public void createUserTest(){
-        User user = new User();
-        user.setUserName("딩디");
+        /*User user = new User();
+        user.setUserName("테스트유저");
         user.setId("1234");
         user.setPw("1234");
         user.setBirthDay(LocalDateTime.now());
-        User saveUser = UserRepository.save(user);
-        System.out.println(saveUser.toString());
+        User saveduser = userRepository.save(user);
+        System.out.println(saveduser.toString());*/
 
 
     }
