@@ -1,4 +1,4 @@
-package com.example.happybirth.dto;
+package com.example.happybirth.web.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,12 +1,14 @@
 package com.example.happybirth.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
-@Setter
 @Entity
+@NoArgsConstructor
 public class Message {
     @Id @Column(name = "WRITER")
     private String writer;
@@ -15,9 +17,16 @@ public class Message {
     @Column(nullable = false)
     private int image;
 
-    @ManyToOne
+    @Builder
+    public Message(String writer, String message, int image){
+        this.writer = writer;
+        this.message = message;
+        this.image = image;
+    }
+
+   /* @ManyToOne
     @JoinColumn(name = "USER_name")
-    private User user;
+    private User user;*/
 
 
 }

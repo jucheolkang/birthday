@@ -1,11 +1,11 @@
-package com.example.happybirth.controller;
+package com.example.happybirth.web;
 
 
 
-import com.example.happybirth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/user")
 public class UserController {
-    private final UserRepository userRepository;
+
+
 
 
 
