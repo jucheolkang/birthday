@@ -16,7 +16,7 @@ public class MessageController {
         this.messageService = messageService;
     }
 
-    @PostMapping("/api/v1/Message")
+    @PostMapping("/api/Message")
     public String save(@RequestBody MessageSaveDto requestDto){
         return messageService.save(requestDto);
     }

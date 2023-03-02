@@ -4,6 +4,7 @@ package com.example.happybirth.domain;
 import com.example.happybirth.domain.repository.MessageRepository;
 import org.junit.After;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,8 +23,9 @@ public class MessageRepositoryTest {
     @After
     public void cleanup(){messageRepository.deleteAll();}
 
+    @DisplayName("메시지저장_불러오기")
     @Test
-    public void 게시글저장_불러오기(){
+    public void 메시지저장_불러오기(){
         //given
         String writer = "작성자";
         String mes = "축하해";
