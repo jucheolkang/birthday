@@ -16,12 +16,16 @@ public class MessageController {
         this.messageService = messageService;
     }
 
-    @PostMapping("/api/Message")
+    @PostMapping("/Message")
     public String save(@RequestBody MessageSaveDto requestDto){
         return messageService.save(requestDto);
     }
 
-    @GetMapping("/api/v1/Message/{writer}")
+    @GetMapping("/Message/{writer}")
     public MessageResponseDto findByWriter(@PathVariable String writer){return messageService.findByWriter(writer);}
 
+    @DeleteMapping("/Message/deleteAll")
+    public void delete(){
+        messageService.delete();
+    }
 }

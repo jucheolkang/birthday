@@ -33,4 +33,10 @@ public class MessageService {
         return messageRepository.findAllDesc().stream().map(MessageLIstResponseDto::new).collect(Collectors.toList());
     }
 
+    @Transactional
+    public void delete(){
+        messageRepository.deleteAll();
+
+    }
+
 }
