@@ -25,8 +25,8 @@ public class User {
     @Column(nullable = false)
     private LocalDateTime birthDay;
 
-    /*@OneToMany(mappedBy = "user")
-    private List<Message> messagesList = new ArrayList<Message>();*/
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    private List<Message> messagesList = new ArrayList<Message>();
 
 
 }

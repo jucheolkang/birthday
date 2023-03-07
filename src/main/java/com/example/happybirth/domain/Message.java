@@ -24,9 +24,9 @@ public class Message {
         this.image = image;
     }
 
-   /* @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "USER_name")
-    private User user;*/
+    private User user;
 
 
 }

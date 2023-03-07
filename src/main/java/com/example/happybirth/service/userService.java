@@ -1,8 +1,13 @@
 package com.example.happybirth.service;
 
-import com.example.happybirth.domain.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@RequiredArgsConstructor
+
+@Service
 public class userService {
+
 
 }
