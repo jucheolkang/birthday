@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class User {
+public class Member {
     @Id @GeneratedValue
     @Column(name = "USER_name")
     private String userName;
@@ -25,7 +25,7 @@ public class User {
     @Column(nullable = false)
     private LocalDateTime birthDay;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
     private List<Message> messagesList = new ArrayList<Message>();
 
 
