@@ -20,7 +20,7 @@ public class MessageService {
 
     private final MessageRepository messageRepository;
     @Transactional
-    public String save(MessageSaveDto requestDto){
+    public String mesSave(MessageSaveDto requestDto){
         return messageRepository.save(requestDto.toEntity()).getWriter();
     }
     @Transactional

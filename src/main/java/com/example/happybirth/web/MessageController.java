@@ -18,7 +18,7 @@ public class MessageController {
 
     @PostMapping("/Message")
     public String save(@RequestBody MessageSaveDto requestDto){
-        return messageService.save(requestDto);
+        return messageService.mesSave(requestDto);
     }
 
     @GetMapping("/Message/{writer}")
