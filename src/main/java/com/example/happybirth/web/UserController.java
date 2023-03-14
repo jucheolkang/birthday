@@ -2,19 +2,23 @@ package com.example.happybirth.web;
 
 
 
+import com.example.happybirth.service.MemberService;
+import com.example.happybirth.web.dto.MemberSaveDto;
 import lombok.RequiredArgsConstructor;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user")
-public class UserController {
 
+public class UserController {
+    private final MemberService memberService;
+@PostMapping("/user")
+    public void addUser(@RequestBody MemberSaveDto memberSaveDto){
+    memberService.memberSave(memberSaveDto);
+}
 
 
 
