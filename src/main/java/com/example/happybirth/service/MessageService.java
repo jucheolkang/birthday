@@ -1,5 +1,6 @@
 package com.example.happybirth.service;
 
+import com.example.happybirth.domain.Member;
 import com.example.happybirth.domain.repository.MessageRepository;
 import com.example.happybirth.web.dto.MessageLIstResponseDto;
 import com.example.happybirth.web.dto.MessageResponseDto;
@@ -19,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class MessageService {
 
     private final MessageRepository messageRepository;
+    private final Member member;
     @Transactional
     public String mesSave(MessageSaveDto requestDto){
         return messageRepository.save(requestDto.toEntity()).getWriter();

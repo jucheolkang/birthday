@@ -2,10 +2,7 @@ package com.example.happybirth.domain;
 
 import com.mysql.cj.x.protobuf.MysqlxCursor;
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -15,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 public class Member {
     @Id @GeneratedValue
     @Column(name = "USER_name")
@@ -29,17 +27,17 @@ public class Member {
 
     @Column
     private String email;
+
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
+    private List<Message> messagesList = new ArrayList<Message>();
     @Builder
-    public Member(String userName, String id, String pw, LocalDateTime birthDay){
+    public Member(String userName, String id, String pw, LocalDateTime birthDay, String email){
         this.userName = userName;
         this.id = id;
         this.pw = pw;
         this.birthDay = birthDay;
+        this.email = email;
     }
-
-    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
-    private List<Message> messagesList = new ArrayList<Message>();
-
-
 
 }
