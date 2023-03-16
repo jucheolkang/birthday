@@ -7,11 +7,11 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
+@Table
 @Entity
 @Getter
 @Setter
-@ToString
+
 @NoArgsConstructor
 public class Member {
     @Id @GeneratedValue
@@ -24,8 +24,7 @@ public class Member {
     private String pw;
     @Column(nullable = false)
     private LocalDateTime birthDay;
-
-    @Column
+    @Column(nullable = false)
     private String email;
 
 

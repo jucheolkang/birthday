@@ -4,9 +4,10 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+@Table
 @Getter
 @Entity
+
 @NoArgsConstructor
 public class Message {
     @Id @Column(name = "WRITER")
