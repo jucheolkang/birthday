@@ -14,7 +14,7 @@ import java.util.List;
 
 @NoArgsConstructor
 public class Member {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_name")
     private String userName;
 

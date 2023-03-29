@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class Message {
-    @Id @Column(name = "WRITER")
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "WRITER")
     private String writer;
     @Column(nullable = false, length = 300)
     private String message;
